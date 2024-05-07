@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
-import Navbar from './components/Navbar';
-import NewStacks from './components/NewStacks';
+import { Route, Routes } from 'react-router-dom';
+import StacksPage from './pages/StacksPage';
+import EditPage from './pages/EditPage';
 
 const App = () => {
   return (
-    <div className='flex flex-col'>
-    <Navbar />
-    <NewStacks />
-    </div>
+    <Routes>
+      <Route path='/stacks' element={<StacksPage />}/>
+      <Route path='/edits' element={<EditPage />}/>
+    </Routes>
   );
 }
 
