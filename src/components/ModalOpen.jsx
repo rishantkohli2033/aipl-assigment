@@ -19,7 +19,6 @@ function ModalOpen({input, setInput}) {
         e.preventDefault();
         await setStackArray(input);
     }
-    console.log(stackArray);
     return (
         <>
             <Button onClick={onOpen} colorScheme='green' color={'white'}>+ New Stack</Button>
