@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AlignJustify, ChevronDown, FolderPen, Sparkles, Workflow, Wrench } from 'lucide-react';
 
-const Sidebar = () => {
+const Sidebar = ({agents, setAgents, openAI, setOpenAI}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState({
     Agents: false,
     Tools: false,
@@ -26,7 +26,7 @@ const Sidebar = () => {
           <ChevronDown size={15} strokeWidth={2.25} />
         </li>
         {isDropdownOpen.Agents && (
-          <div className='flex justify-center pr-4 pl-4'><button className='border-2 w-full flex items-center justify-between pr-4 pl-4 pt-2 pb-2 hover:border-slate-500 rounded-lg border-slate-300'>Agents <AlignJustify size={20} strokeWidth={0.75} /> </button></div>
+          <div className='flex justify-center pr-4 pl-4'><button onClick={()=>setAgents(!agents)} className='border-2 w-full flex items-center justify-between pr-4 pl-4 pt-2 pb-2 hover:border-slate-500 rounded-lg border-slate-300'>Agents <AlignJustify size={20} strokeWidth={0.75} /> </button></div>
           )}
         <li className="p-4 hover:bg-gray-100 cursor-pointer flex items-center justify-between" onClick={() => toggleDropdown('Tools')} name="tools"><div className="flex items-center gap-4 font-medium">
           <Wrench size={20} strokeWidth={1.75} /> Tools
@@ -45,7 +45,7 @@ const Sidebar = () => {
           <ChevronDown size={15} strokeWidth={2.25} />
         </li>
         {isDropdownOpen.LLMS && (
-          <div className='flex flex-col justify-center pr-4 pl-4 gap-y-2'><button className='border-2 w-full flex items-center justify-between pr-4 pl-4 pt-2 pb-2 hover:border-slate-500 rounded-lg border-slate-300'>OpenAI 3.5 <AlignJustify size={20} strokeWidth={0.75} /> </button>
+          <div className='flex flex-col justify-center pr-4 pl-4 gap-y-2'><button onClick={()=>setOpenAI(!openAI)} className='border-2 w-full flex items-center justify-between pr-4 pl-4 pt-2 pb-2 hover:border-slate-500 rounded-lg border-slate-300'>OpenAI 3.5 <AlignJustify size={20} strokeWidth={0.75} /> </button>
           <button className='border-2 w-full flex items-center justify-between pr-4 pl-4 pt-2 pb-2 hover:border-slate-500 rounded-lg border-slate-300'>OpenAI 4 <AlignJustify size={20} strokeWidth={0.75} /> </button>
           <button className='border-2 w-full flex items-center justify-between pr-4 pl-4 pt-2 pb-2 hover:border-slate-500 rounded-lg border-slate-300'>Azure OpenAI <AlignJustify size={20} strokeWidth={0.75} /> </button>
           </div>
