@@ -5,7 +5,7 @@ import EditsPage from './pages/EditsPage';
 const App = () => {
   return (
     <Routes>
-      <Route path='/stacks' element={<StacksPage />}/>
+      <Route path='/' element={<StacksPage />}/>
       <Route path='/edits' element={<EditsPage />}/>
     </Routes>
   );

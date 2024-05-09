@@ -31,11 +31,11 @@ function ModalOpen({input, setInput}) {
             >
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Create your account</ModalHeader>
+                    <ModalHeader>Create New Stack</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
                         <FormControl>
-                            <FormLabel>Desc</FormLabel>
+                            <FormLabel>Name</FormLabel>
                             <Input ref={initialRef} placeholder='Stack name' name="stackName" value={input.stackName} onChange={handleInputChange} />
                         </FormControl>
 

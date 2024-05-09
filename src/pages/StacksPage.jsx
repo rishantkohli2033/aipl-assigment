@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+
 import NewStacks from '../components/NewStacks'
 
 function StacksPage() {

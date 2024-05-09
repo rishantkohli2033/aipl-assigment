@@ -22,7 +22,10 @@ const AgentsForm = () => {
             <hr className="border-t my-2" />
 
             <label htmlFor="capability" className="block mb-2 text-gray-700">Capability</label>
-            <select type="text" id="capability" name="capability" className="w-full p-2 border border-gray-300 rounded-md mb-2" />
+            <select type="text"  placeholder="hello" id="capability" name="capability" className="w-full p-2 border border-gray-300 rounded-md mb-2" >
+              <option value="llm_task_executor">llm_task_executor</option>
+              <option value="search_executor">search_executor</option>
+            </select>
             <hr className="border-t my-2" />
 
             <label htmlFor="task" className="block mb-2 text-gray-700">Task</label>

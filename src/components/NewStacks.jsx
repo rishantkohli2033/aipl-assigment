@@ -46,7 +46,7 @@ const CardComponent = ({ stackName, stackDesc }) => (
     <h2 className="text-xl font-bold mb-4">{stackName}</h2>
     <p className="text-gray-700 text-sm mb-4">{stackDesc}</p>
     <div className="flex justify-end mt-auto">
-    <Link to={"/edits"} className="bg-white border-neutral-200 border-2 hover:bg-slate-500 text-black py-2 px-4 rounded flex items-center gap-1">
+    <Link to={"/edits"} className="bg-white border-neutral-200 border-2 hover:bg-neutral-100 text-black transition py-2 px-4 rounded flex items-center gap-1">
         Edit Stack <ExternalLink size={18} className="ml-1 text-gray-900" />
     </Link>
     </div>
